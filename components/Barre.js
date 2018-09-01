@@ -9,11 +9,12 @@ class Barre extends React.Component {
      
         <View style={styles.container}>
           <TouchableOpacity style={styles.button} onPress={()=>{alert("you clicked me")}}>
-            <Image source={require("../src/img/menu.png")}/>
+            <Image  style={styles.menu} source={require("../images/menu.png")}/>
           </TouchableOpacity>
-          <Image style={styles.image} source={require('../src/img/logo-bleu.png')}/> 
+          <Image style={styles.image} source={require('../images/logo-bleu.png')}/> 
         </View>
-   
+
+
     )
   }
 }
@@ -21,24 +22,29 @@ class Barre extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    backgroundColor: '#fff',
-    marginTop: 25,
-    marginBottom: 10,
+    backgroundColor: 'white',
+    width: '100%',
+    height: 40,
+    flexDirection: 'row',
   },
   button: {
     flex:1,
     marginRight: 0,
-    width: 50,
-    height: 50,
   },
+
   image: {
-    marginTop: 10,
     flex: 6,
-    marginLeft: 0,
-    marginRight: 10,
-    width: 320,
+    padding: 10,
+    width: '100%',
     height: 40,
   },
+  menu: {
+    width: 30,
+    height: 30,
+    padding: 10,
+    marginLeft: 5,
+  },
+  
 });
 
 export default Barre
